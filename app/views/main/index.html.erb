@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>不见得(index)</title>
+    <!-- oocss related stylesheets -->
+    <link rel="stylesheet" type="text/css" media="all"  href="stylesheets/libraries.css" />
+    <link rel="stylesheet" type="text/css" media="all"  href="stylesheets/template.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/grids.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/content.css" />
+    <!-- project defined stylesheets -->
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/additional.css" />
+    <!-- dateslider stylesheets -->
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/dateslider.css" />
+
+    <script type="text/javascript" src="javascripts/prototype.js"></script>
+    <script type="text/javascript" src="javascripts/effects.js"></script>
+    <script type="text/javascript" src="javascripts/dragdrop.js"></script>
+    <script type="text/javascript" src="javascripts/date-en-US.js"></script>
+    <script type="text/javascript" src="javascripts/dateslider.js"></script>
+    <script src="http://ditu.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAA2hWMbB1Gr1rLlQTiNhiV2RSxreqFRf-osvgyWLn6GMIlFlhMNRTkiREqABPrLzUPvFGyCd4mJ0FS4A" type="text/javascript"></script>
+    <script type="text/javascript">
+    //<![CDATA[
+    var map ;
+    function load() {
+      if (GBrowserIsCompatible()) {
+        map = new GMap2(document.getElementById("googleMap"));
+        map.setCenter(new GLatLng(39.917, 116.397), 4);
+      }
+    }
+    //]]>
+    </script>
+  </head>
+<body onload="load()" onunload="GUnload()">
+<!-- befor new body -->
+<div class="page">
+	<div class="head buHead">
+		<a class="logo" href="/">Bujiande</a>
+		<ul class="outter">
+			<li><a href="#">mifan</a></li>
+			<li><a href="#">设置</a></li>
+			<li><a href="#">消息</a></li>
+			<li><a href="signup.html">注册</a></li>
+			<li><a href="login.html">登录</a></li>
+		</ul>
+	</div>
+	<div class="body buBackColor"><!-- Body -->
+		<div class="rightCol"><!-- Right Column (optional region) -->
+			<h2>不见得是啥?</h2>
+			<p>The right column is by default 300px wide.  It can be extended via all the same classes that are available to right column.</p>
+			<ul>
+				<li>.gMail = 160px</li>
+				<li>.gCal = 180px</li>
+				<li>.yahoo = 240px</li>
+				<li>.myYahoo = 300px</li>
+			</ul>
+		</div>
+		<div class="main"><!-- Main Content -->
+			<h3><strong>地点</strong></h3>
+			<div id="googleMap"></div>
+			<div id="timePoint">
+				<div id="slider-container">
+					<div id = "sliderbar"></div>
+				</div>
+			</div>
+			<script language = "javascript">	
+				l_oOptions = {
+					dragHandles:false,
+					dayWidth: 1,
+					dateFormat : 'yyyy-M-d'
+				}
+				p_oDateSlider = new DateSlider('sliderbar', '2009-01-01', '2009-01-02', 1999, 2009, l_oOptions);
+				//p_oDateSlider.attachFields($('datestart'), $('dateend'));
+			</script>
+		</div>
+	</div>
+	<div class="foot buFoot">
+		<ul class="outter">
+			<li class="first">&copy; 2009 Twitter</li>
+			<li><a href="/about#about">About Us</a></li>
+			<li><a href="/about#contact">Contact</a></li>
+			<li><a href="http://blog.twitter.com">Blog</a></li>
+			<li><a href="http://status.twitter.com">Status</a></li>
+			<li><a href="/downloads">Apps</a></li>
+			<li><a href="http://apiwiki.twitter.com/">API</a></li>
+			<li><a href="http://search.twitter.com">Search</a></li>
+			<li><a href="http://help.twitter.com">Help</a></li>
+			<li><a href="/jobs">Jobs</a></li>
+			<li><a href="/terms">Terms</a></li>
+			<li><a href="/privacy">Privacy</a></li>
+		</ul>
+	</div>
+</div>
+<!-- end new body -->
+ </body>
+</html>
