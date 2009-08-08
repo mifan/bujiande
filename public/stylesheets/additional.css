@@ -14,6 +14,15 @@
 .buBody{  
 }
 
+.buRightCol {
+ 
+}
+
+.buMain {
+  border-right: 1px solid #BDDCAD;
+    background-color:#E2F2FB;
+}
+
 .buFoot {
   border-top:2px solid #ddd;
   margin:0;
@@ -21,7 +30,8 @@
 
 /* custom color , class include [buBackColor] */
 .buBackColor{
-  background-color:#E2F2FB;
+
+    background-color: #DDFFCC;
 }
 
 
