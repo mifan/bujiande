@@ -1,6 +1,5 @@
-
 		<div class="rightCol"><!-- Right Column (optional region) -->
-			<h2>不见得是啥?</h2>
+			<h2>不见得是啥a?</h2>
 			<p>The right column is by default 300px wide.  It can be extended via all the same classes that are available to right column.</p>
 			<ul>
 				<li>.gMail = 160px</li>
@@ -10,11 +9,31 @@
 			</ul>
 		</div>
 		<div class="main"><!-- Main Content -->
-			<h3><strong>地点</strong></h3>
-			<div id="googleMap"></div>
-			<div id="timePoint">
-				<div id="slider-container">
-					<div id = "sliderbar"></div>
-				</div>
+			<div class="UISelectBox">
+				<a href="#" class="UISelectValue">选项六</a>
+				<ul class="UISelectBoxOptions" style="display: none;">
+					<li class="UISelectBoxItem"><a rel="1" href="#">选项一</a></li>
+					<li class="UISelectBoxItem"><a rel="2" href="#">选项二</a></li>
+					<li class="UISelectBoxItem"><a rel="3" href="#">选项二</a></li>
+				</ul>
 			</div>
+			<script type="text/javascript">
+			// hover
+			$(".UISelectBox").hover(function(){
+					$(this).addClass("UISelectBoxHover");
+				},function(){
+					$(this).removeClass("UISelectBoxHover");
+			});
+			//click
+			$(".UISelectBox").click(function(){
+				$(this).blur();	
+				$(".UISelectBox .UISelectBoxOptions").toggle();
+				return false;
+			});
+
+
+
+			</script>
+			<div id="googleMap"></div>
+		
 		</div>

@@ -182,3 +182,85 @@ font-size:0.85em;
 font-style:italic;
 margin:3px 0 0;
 }
+
+
+
+
+
+
+
+
+
+
+/* facked select style */
+.UISelectBox {
+	background:#E2F2FB url(../images/selectbox/select_box_off.gif) no-repeat right center;
+	/* border:1px solid #999; */
+	border:5px solid white;
+	cursor:pointer;
+	display:block;
+	width: 560px; height: 61px;
+	margin:15px;
+}
+
+.UISelectBoxHover {
+	background:#E2F2FB url(../images/selectbox/select_box_on.gif) no-repeat right center;
+}
+
+/* 解决 firefox 点击放大出现虚线框，从而导致滚动条的问题  */
+.UISelectBox a { 
+	outline: none; 
+	text-decoration:none;
+}
+.UISelectBox a:focus { 
+	outline: none; 
+	text-decoration:none;
+}
+
+.UISelectBox a.UISelectValue {
+	display:block;
+	margin:1px 1px 2px;
+	padding:5px 20px 5px 55px;
+	white-space:nowrap;
+	color:#000;	
+	overflow:hidden;
+	width:410px;
+	font-size:38px;
+	background:#E2F2FB url(../images/selectbox/left1.jpg) no-repeat left center;
+}
+
+
+.UISelectBoxOptions {
+	background:#E2F2FB;
+	border:5px solid white;
+	margin-left: -5px;
+	list-style:none;
+	overflow-y:auto;
+	z-index:1000;
+	position: absolute;
+	width:560px;
+	height:215px;
+	display:none;
+	overflow:auto;
+	padding: 0;
+
+}
+.UISelectBoxOptions a{
+	color:#666;
+	display:block;
+	height:61px;
+	line-height:61px;
+	padding-left:4px;
+	overflow:hidden;
+	white-space:nowrap;
+	font-size:30px;
+	padding:5px 20px 5px 55px;
+	background:#E2F2FB url(../images/selectbox/select4.jpg) no-repeat left center;
+}
+.UISelectBoxOptions a:hover{
+
+	background: #AADBF9 url(../images/selectbox/select4.jpg) no-repeat left center;
+}
+.UISelectBoxOptions a.selected{
+	background: #bbb url(../images/selectbox/select4.jpg) no-repeat left center;
+}

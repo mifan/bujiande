@@ -36,25 +36,7 @@
 		<%=render(:partial => "tiles/head_links") %>
 	</div>
 	<div class="body buBackColor"><!-- Body -->
-		<div class="rightCol"><!-- Right Column (optional region) -->
-			<h2>不见得是啥?</h2>
-			<p>The right column is by default 300px wide.  It can be extended via all the same classes that are available to right column.</p>
-			<ul>
-				<li>.gMail = 160px</li>
-				<li>.gCal = 180px</li>
-				<li>.yahoo = 240px</li>
-				<li>.myYahoo = 300px</li>
-			</ul>
-		</div>
-		<div class="main"><!-- Main Content -->
-			<h3><strong>地点</strong></h3>
-			<div id="googleMap"></div>
-			<div id="timePoint">
-				<div id="slider-container">
-					<div id = "sliderbar"></div>
-				</div>
-			</div>
-		</div>
+		 <%= yield %> 
 	</div>
 	<div class="foot buFoot">
 		<%=render(:partial => "tiles/foot_links") %>
