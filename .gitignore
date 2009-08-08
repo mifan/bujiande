@@ -2,3 +2,5 @@
 *.log
 #ignore tmpdir
 /tmp
+#ignore Thumbs.db
+Thumbs.db

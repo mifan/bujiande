@@ -1,0 +1,184 @@
+/* Default extension of page layout : class include [buPage,buHead,buBody,buFooter] */
+
+
+.buPage{
+}
+
+.buHead{
+  background-color:#f9f9f9;
+  border-bottom:2px solid #ddd;
+  overflow:hidden;
+  padding-left: 30px;
+}
+
+.buBody{  
+}
+
+.buFoot {
+  border-top:2px solid #ddd;
+  margin:0;
+}
+
+/* custom color , class include [buBackColor] */
+.buBackColor{
+  background-color:#E2F2FB;
+}
+
+
+/*     Treatment logo ,class include [logo]*/
+/* image size 125x29 */
+.logo {
+  background:transparent url(../images/logo.png) no-repeat scroll 0 0;
+  float:left;
+  width:125px;
+  height:29px;
+  margin: 5px 0 5px 25px;
+  overflow:hidden;
+  text-indent:-9999px;
+}
+ 
+
+ /*    twitter copyed ul.outer , for link list only. include class [ul.outter,ul.outter li] */
+ul.outter {
+  float:right;
+  list-style-image:none;
+  list-style-position:outside;
+  list-style-type:none;
+  margin:1em 18px 0;
+  overflow:hidden;
+  padding:0;
+}
+
+ul.outter li {
+  background:transparent none no-repeat scroll 0 50%;
+  display:inline;
+  float:left;
+  margin-left:-2px;
+  padding:0 8px;
+}
+
+/* container for google map , include id [googleMap] */
+
+#googleMap {
+  border:5px solid white;
+  margin:15px;
+  width:560px;
+  height:500px;
+}
+
+/* container for time slider , include id [timePoint]*/
+#timePoint {
+  border:5px solid white;
+  margin:15px;
+  width:560px;
+  height:35px;
+}
+
+
+.standardForm{ 
+  border:5px solid #ddd;
+  margin:2em auto 2em;
+  padding:1em 2em 1em;
+  width:30em;
+}
+
+.standardForm a { 
+font-size:90%;
+}
+
+.standardForm form label, label.standard {
+color:#666666;
+display:block;
+font-size:110%;
+margin:1em 0 0;
+}
+
+.standardForm form input.text, .standardForm form textarea {
+  border:1px solid #888888;
+  padding:5px;
+  background-color: #f9f9f9;
+}
+
+/*      Image ul li                 */
+ul.rowBox { 
+/*
+  list-style-image:none;
+  list-style-position:outside;
+  list-style-type:none;
+  */
+  background-color:#FFFFFF;
+}
+
+ul.rowBox li:first-child { 
+  border-top:1px dashed #D2DADA;
+}
+ul.rowBox li { 
+border-bottom:1px dashed #D2DADA;
+line-height:1.1em;
+padding:0.7em 0 0.6em;
+position:relative;
+}
+
+ul.rowBox li:hover, ul.rowBox li.hover {
+  background-color:#F7F7F7;
+}
+
+
+.normalFont {
+ font-weight:normal;
+}
+
+.photoBox {
+  display:block;
+  height:160px;
+  width:160px;  
+  left:0;
+   margin:0 10px 0 5px;
+   overflow:hidden;
+   position:absolute;
+ 
+}
+
+.thumbBox {
+  display:block;
+  height:50px;
+  width:50px;  
+  left:0;
+   margin:0 10px 0 5px;
+   overflow:hidden;
+   position:absolute;
+ 
+}
+
+ .infoBox {
+display:block;
+margin-left:165px;
+min-height:150px;
+overflow:hidden;
+width:400px;
+}
+
+ .infoBox2 {
+display:block;
+margin-left:65px;
+min-height:50px;
+overflow:hidden;
+width:400px;
+}
+
+ .actions{
+border-width:0;
+line-height:1.25em;
+position:absolute;
+right:5px;
+top:0.5em;
+}
+
+.meta {
+color:#999999;
+display:block;
+font-family:georgia;
+font-size:0.85em;
+font-style:italic;
+margin:3px 0 0;
+}
