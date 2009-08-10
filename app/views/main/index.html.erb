@@ -1,13 +1,59 @@
 		<div class="rightCol buRightCol"><!-- Right Column (optional region) -->
 			<h2>不见得是啥a?</h2>
 			<p>The right column is by default 300px wide.  It can be extended via all the same classes that are available to right column.</p>
-			<ul>
-				<li>.gMail = 160px</li>
-				<li>.gCal = 180px</li>
-				<li>.yahoo = 240px</li>
-				<li>.myYahoo = 300px</li>
-			</ul>
+			<div class="collapsible">
+				<h2 class="sidebarTitle">
+					<span>照片</span>
+				</h2>
+				<ul class="sidebarMenu" style="display: block;">
+					<li class="active">
+						<a rel="history"  title="#beforethestorm" href="#">
+							<span>地图浏览</span>
+						</a>
+					</li>
+					<li>
+						<a rel="history" href="#">
+							<span>列表浏览</span>
+						</a>
+					</li>
+					<li>
+						<a rel="history" href="#">
+							<span>上传照片</span>
+						</a>
+					</li>
+				</ul>
+				<hr/>
+			</div>
+			<div class="collapsible collapsed">
+				<h2 class="sidebarTitle">
+					<span>相册</span>
+				</h2>
+				<ul class="sidebarMenu" style="display: none;">
+					<li>
+						<a rel="history"  title="#beforethestorm" href="#">
+							<span>相册浏览</span>
+						</a>
+					</li>
+					<li>
+						<a rel="history" href="#">
+							<span>管理相册</span>
+						</a>
+					</li>
+				</ul>
+				<hr/>
+			</div>
+			<script type="text/javascript">
+			//click
+			$(".collapsible").click(function(){
+				//$(this).toggleClass("collapsed");
+				//$(this).find(".sidebarMenu").toggle();//				
+				$(this).toggleClass("collapsed").find(".sidebarMenu").toggle();
+				return false;
+			});
+			</script>
 		</div>
+
+
 		<div class="main buMain"><!-- Main Content -->
 			<div class="UISelectBox">
 				<a href="#" class="UISelectValue">选项六</a>

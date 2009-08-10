@@ -5,27 +5,124 @@
 }
 
 .buHead{
-  background-color:#f9f9f9;
-  border-bottom:2px solid #ddd;
-  overflow:hidden;
-  padding-left: 30px;
+    background-color:#f9f9f9;
+    border-bottom:2px solid #ddd;
+    overflow:hidden;
+    padding-left: 30px;
 }
 
 .buBody{  
 }
 
 .buRightCol {
- 
+
 }
 
+/* ###############-------------side bar begin ---------- */
+.collapsible{}
+.collapsed h2.sidebarTitle {
+  -moz-background-clip:border;
+  -moz-background-inline-policy:continuous;
+  -moz-background-origin:padding;
+  background:transparent url(/images/toggle_down_dark.png) no-repeat scroll right center;
+}
+
+
+h2.sidebarTitle:hover {
+    cursor:pointer;
+}
+
+h2.sidebarTitle {
+    -moz-background-clip:border;
+    -moz-background-inline-policy:continuous;
+    -moz-background-origin:padding;
+    background:transparent url(/images/toggle_up_dark.png) no-repeat scroll right center;
+    width:257px;
+    font-size:1.05em;
+    font-weight:normal;
+    padding:0.2em 14px;
+}
+
+h2.sidebarTitle span {
+    opacity:0.7;
+}
+
+ul.sidebarMenu {
+padding: 0;
+}
+ul.sidebarMenu li {
+    padding-top:1px;
+}
+
+
+ul.sidebarMenu li a {
+    background-image:none;
+    clear:both;
+    cursor:pointer !important;
+    display:block;
+    margin-right:-1px;
+    outline-color:-moz-use-text-color;
+    outline-style:none;
+    outline-width:medium;
+    padding:0.5em 0 0.5em 28px;
+	font-weight: normal;
+}
+
+ul.sidebarMenu li a:hover {
+    background-color:#EDFFE5;
+    text-decoration:none;
+}
+
+ul.sidebarMenu li a:visited {
+    text-decoration:none;
+}
+
+ul.sidebarMenu li.active a{
+    color: #555;
+	font-weight: bold;
+}
+
+ul.sidebarMenu li a span {
+    display:inline-block;
+    font-size:0.9em;
+}
+
+
+.collapsible hr {
+    -moz-background-clip:border;
+    -moz-background-inline-policy:continuous;
+    -moz-background-origin:padding;
+    background:#BDDCAD none repeat scroll 0 0;
+    border:0 none;
+    color:#BDDCAD;
+    display:block;
+    height:1px;
+    margin:0.5em 14px;
+    opacity:0.7;
+}
+
+/* ###############-------------side bar End ---------- */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
 .buMain {
-  border-right: 1px solid #BDDCAD;
+    border-right: 1px solid #BDDCAD;
     background-color:#E2F2FB;
 }
 
 .buFoot {
-  border-top:2px solid #ddd;
-  margin:0;
+    border-top:2px solid #ddd;
+    margin:0;
 }
 
 /* custom color , class include [buBackColor] */
@@ -38,163 +135,160 @@
 /*     Treatment logo ,class include [logo]*/
 /* image size 125x29 */
 .logo {
-  background:transparent url(../images/logo.png) no-repeat scroll 0 0;
-  float:left;
-  width:125px;
-  height:29px;
-  margin: 5px 0 5px 25px;
-  overflow:hidden;
-  text-indent:-9999px;
+    background:transparent url(../images/logo.png) no-repeat scroll 0 0;
+    float:left;
+    width:125px;
+    height:29px;
+    margin: 5px 0 5px 25px;
+    overflow:hidden;
+    text-indent:-9999px;
 }
- 
 
- /*    twitter copyed ul.outer , for link list only. include class [ul.outter,ul.outter li] */
+
+/*    twitter copyed ul.outer , for link list only. include class [ul.outter,ul.outter li] */
 ul.outter {
-  float:right;
-  list-style-image:none;
-  list-style-position:outside;
-  list-style-type:none;
-  margin:1em 18px 0;
-  overflow:hidden;
-  padding:0;
+    float:right;
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    margin:1em 18px 0;
+    overflow:hidden;
+    padding:0;
 }
 
 ul.outter li {
-  background:transparent none no-repeat scroll 0 50%;
-  display:inline;
-  float:left;
-  margin-left:-2px;
-  padding:0 8px;
+    background:transparent none no-repeat scroll 0 50%;
+    display:inline;
+    float:left;
+    margin-left:-2px;
+    padding:0 8px;
 }
 
 /* container for google map , include id [googleMap] */
 
 #googleMap {
-  border:5px solid white;
-  margin:15px;
-  width:560px;
-  height:500px;
+    border:5px solid white;
+    margin:15px;
+    width:560px;
+    height:500px;
 }
 
 /* container for time slider , include id [timePoint]*/
 #timePoint {
-  border:5px solid white;
-  margin:15px;
-  width:560px;
-  height:35px;
+    border:5px solid white;
+    margin:15px;
+    width:560px;
+    height:35px;
 }
 
 
 .standardForm{ 
-  border:5px solid #ddd;
-  margin:2em auto 2em;
-  padding:1em 2em 1em;
-  width:30em;
+    border:5px solid #ddd;
+    margin:2em auto 2em;
+    padding:1em 2em 1em;
+    width:30em;
 }
 
 .standardForm a { 
-font-size:90%;
+    font-size:90%;
 }
 
 .standardForm form label, label.standard {
-color:#666666;
-display:block;
-font-size:110%;
-margin:1em 0 0;
+    color:#666666;
+    display:block;
+    font-size:110%;
+    margin:1em 0 0;
 }
 
 .standardForm form input.text, .standardForm form textarea {
-  border:1px solid #888888;
-  padding:5px;
-  background-color: #f9f9f9;
+    border:1px solid #888888;
+    padding:5px;
+    background-color: #f9f9f9;
 }
 
 /*      Image ul li                 */
 ul.rowBox { 
-/*
-  list-style-image:none;
-  list-style-position:outside;
-  list-style-type:none;
-  */
-  background-color:#FFFFFF;
+    /*
+      list-style-image:none;
+      list-style-position:outside;
+      list-style-type:none;
+    */
+    background-color:#FFFFFF;
 }
 
 ul.rowBox li:first-child { 
-  border-top:1px dashed #D2DADA;
+    border-top:1px dashed #D2DADA;
 }
 ul.rowBox li { 
-border-bottom:1px dashed #D2DADA;
-line-height:1.1em;
-padding:0.7em 0 0.6em;
-position:relative;
+    border-bottom:1px dashed #D2DADA;
+    line-height:1.1em;
+    padding:0.7em 0 0.6em;
+    position:relative;
 }
 
 ul.rowBox li:hover, ul.rowBox li.hover {
-  background-color:#F7F7F7;
+    background-color:#F7F7F7;
 }
 
 
 .normalFont {
- font-weight:normal;
+    font-weight:normal;
 }
 
 .photoBox {
-  display:block;
-  height:160px;
-  width:160px;  
-  left:0;
-   margin:0 10px 0 5px;
-   overflow:hidden;
-   position:absolute;
- 
+    display:block;
+    height:160px;
+    width:160px;
+    left:0;
+    margin:0 10px 0 5px;
+    overflow:hidden;
+    position:absolute;
+
 }
 
 .thumbBox {
-  display:block;
-  height:50px;
-  width:50px;  
-  left:0;
-   margin:0 10px 0 5px;
-   overflow:hidden;
-   position:absolute;
- 
+    display:block;
+    height:50px;
+    width:50px;
+    left:0;
+    margin:0 10px 0 5px;
+    overflow:hidden;
+    position:absolute;
+
 }
 
- .infoBox {
-display:block;
-margin-left:165px;
-min-height:150px;
-overflow:hidden;
-width:400px;
+.infoBox {
+    display:block;
+    margin-left:165px;
+    min-height:150px;
+    overflow:hidden;
+    width:400px;
 }
 
- .infoBox2 {
-display:block;
-margin-left:65px;
-min-height:50px;
-overflow:hidden;
-width:400px;
+.infoBox2 {
+    display:block;
+    margin-left:65px;
+    min-height:50px;
+    overflow:hidden;
+    width:400px;
 }
 
- .actions{
-border-width:0;
-line-height:1.25em;
-position:absolute;
-right:5px;
-top:0.5em;
+.actions{
+    border-width:0;
+    line-height:1.25em;
+    position:absolute;
+    right:5px;
+    top:0.5em;
 }
 
 .meta {
-color:#999999;
-display:block;
-font-family:georgia;
-font-size:0.85em;
-font-style:italic;
-margin:3px 0 0;
+    color:#999999;
+    display:block;
+    font-family:georgia;
+    font-size:0.85em;
+    font-style:italic;
+    margin:3px 0 0;
 }
-
-
-
 
 
 
@@ -204,73 +298,73 @@ margin:3px 0 0;
 
 /* facked select style */
 .UISelectBox {
-	background:#E2F2FB url(../images/selectbox/select_box_off.gif) no-repeat right center;
-	/* border:1px solid #999; */
-	border:5px solid white;
-	cursor:pointer;
-	display:block;
-	width: 560px; height: 61px;
-	margin:15px;
+    background:#E2F2FB url(../images/selectbox/select_box_off.gif) no-repeat right center;
+    /* border:1px solid #999; */
+    border:5px solid white;
+    cursor:pointer;
+    display:block;
+    width: 560px; height: 61px;
+    margin:15px;
 }
 
 .UISelectBoxHover {
-	background:#E2F2FB url(../images/selectbox/select_box_on.gif) no-repeat right center;
+    background:#E2F2FB url(../images/selectbox/select_box_on.gif) no-repeat right center;
 }
 
-/* 解决 firefox 点击放大出现虚线框，从而导致滚动条的问题  */
+/* 解决 firefox 点击放大出现虚线框，从17导致滚动条的问预17  */
 .UISelectBox a { 
-	outline: none; 
-	text-decoration:none;
+    outline: none;
+    text-decoration:none;
 }
 .UISelectBox a:focus { 
-	outline: none; 
-	text-decoration:none;
+    outline: none;
+    text-decoration:none;
 }
 
 .UISelectBox a.UISelectValue {
-	display:block;
-	margin:1px 1px 2px;
-	padding:5px 20px 5px 55px;
-	white-space:nowrap;
-	color:#000;	
-	overflow:hidden;
-	width:410px;
-	font-size:38px;
-	background:#E2F2FB url(../images/selectbox/left1.jpg) no-repeat left center;
+    display:block;
+    margin:1px 1px 2px;
+    padding:5px 20px 5px 55px;
+    white-space:nowrap;
+    color:#000;
+    overflow:hidden;
+    width:410px;
+    font-size:38px;
+    background:#E2F2FB url(../images/selectbox/left1.jpg) no-repeat left center;
 }
 
 
 .UISelectBoxOptions {
-	background:#E2F2FB;
-	border:5px solid white;
-	margin-left: -5px;
-	list-style:none;
-	overflow-y:auto;
-	z-index:1000;
-	position: absolute;
-	width:560px;
-	height:215px;
-	display:none;
-	overflow:auto;
-	padding: 0;
+    background:#E2F2FB;
+    border:5px solid white;
+    margin-left: -5px;
+    list-style:none;
+    overflow-y:auto;
+    z-index:1000;
+    position: absolute;
+    width:560px;
+    height:215px;
+    display:none;
+    overflow:auto;
+    padding: 0;
 
 }
 .UISelectBoxOptions a{
-	color:#666;
-	display:block;
-	height:61px;
-	line-height:61px;
-	padding-left:4px;
-	overflow:hidden;
-	white-space:nowrap;
-	font-size:30px;
-	padding:5px 20px 5px 55px;
-	background:#E2F2FB url(../images/selectbox/select4.jpg) no-repeat left center;
+    color:#666;
+    display:block;
+    height:61px;
+    line-height:61px;
+    padding-left:4px;
+    overflow:hidden;
+    white-space:nowrap;
+    font-size:30px;
+    padding:5px 20px 5px 55px;
+    background:#E2F2FB url(../images/selectbox/select4.jpg) no-repeat left center;
 }
 .UISelectBoxOptions a:hover{
 
-	background: #AADBF9 url(../images/selectbox/select4.jpg) no-repeat left center;
+    background: #AADBF9 url(../images/selectbox/select4.jpg) no-repeat left center;
 }
 .UISelectBoxOptions a.selected{
-	background: #bbb url(../images/selectbox/select4.jpg) no-repeat left center;
+    background: #bbb url(../images/selectbox/select4.jpg) no-repeat left center;
 }
