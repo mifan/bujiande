@@ -44,10 +44,8 @@
 			</div>
 			<script type="text/javascript">
 			//click
-			$(".collapsible").click(function(){
-				//$(this).toggleClass("collapsed");
-				//$(this).find(".sidebarMenu").toggle();//				
-				$(this).toggleClass("collapsed").find(".sidebarMenu").toggle();
+			$(".collapsible .sidebarTitle").click(function(){
+				$(this).parent().toggleClass("collapsed").find(".sidebarMenu").toggle();
 				return false;
 			});
 			</script>
