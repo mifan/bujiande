@@ -165,28 +165,22 @@ ul.outter li {
 }
 
 /* container for google map , include id [googleMap] */
-
 #googleMap {
+}
+
+.standAppContent {
     border:5px solid white;
     margin:15px;
     width:560px;
     height:500px;
 }
 
-/* container for time slider , include id [timePoint]*/
-#timePoint {
-    border:5px solid white;
-    margin:15px;
-    width:560px;
-    height:35px;
-}
 
+ 
 
 .standardForm{ 
-    border:5px solid #ddd;
     margin:2em auto 2em;
     padding:1em 2em 1em;
-    width:30em;
 }
 
 .standardForm a { 
@@ -200,7 +194,7 @@ ul.outter li {
     margin:1em 0 0;
 }
 
-.standardForm form input.text, .standardForm form textarea {
+.standardForm form input.text, .standardForm form textarea, .standardForm form input.select{
     border:1px solid #888888;
     padding:5px;
     background-color: #f9f9f9;
