@@ -47,13 +47,7 @@
 				</ul>
 				<hr/>
 			</div>
-			<script type="text/javascript">
-			//click
-			$(".collapsible .sidebarTitle").click(function(){
-				$(this).parent().toggleClass("collapsed").find(".sidebarMenu").slideToggle("fast");
-				return false;
-			});
-			</script>
+
 		</div>
 
 
@@ -66,23 +60,16 @@
 					<li class="UISelectBoxItem"><a rel="3" href="#">选项二</a></li>
 				</ul>
 			</div>
-			<script type="text/javascript">
-			// hover
-			$(".UISelectBox").hover(function(){
-					$(this).addClass("UISelectBoxHover");
-				},function(){
-					$(this).removeClass("UISelectBoxHover");
-			});
-			//click
-			$(".UISelectBox").click(function(){
-				$(this).blur();	
-				$(".UISelectBox .UISelectBoxOptions").toggle();
-				return false;
-			});
-
-
-
-			</script>
 			<div id="googleMap" class="standAppContent"></div>
+
+    <script type="text/javascript">
+    //<![CDATA[
+    var map ;
+      if (GBrowserIsCompatible()) {
+          map = new GMap2(document.getElementById("googleMap"));
+          map.setCenter(new GLatLng(39.917, 116.397), 4);
+		}
+    //]]>
+    </script>
 		
 		</div>

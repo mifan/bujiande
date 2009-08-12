@@ -166,13 +166,15 @@ ul.outter li {
 
 /* container for google map , include id [googleMap] */
 #googleMap {
+    width:560px;
+    height:500px;
 }
 
 .standAppContent {
     border:5px solid white;
     margin:15px;
     width:560px;
-    height:500px;
+    height:auto;
 }
 
 

@@ -47,13 +47,6 @@
 				</ul>
 				<hr/>
 			</div>
-			<script type="text/javascript">
-			//click
-			$(".collapsible .sidebarTitle").click(function(){
-				$(this).parent().toggleClass("collapsed").find(".sidebarMenu").slideToggle("fast");
-				return false;
-			});
-			</script>
 		</div>
 
 
@@ -66,20 +59,6 @@
 					<li class="UISelectBoxItem"><a rel="3" href="#">选项二</a></li>
 				</ul>
 			</div>
-			<script type="text/javascript">
-			// hover
-			$(".UISelectBox").hover(function(){
-					$(this).addClass("UISelectBoxHover");
-				},function(){
-					$(this).removeClass("UISelectBoxHover");
-			});
-			//click
-			$(".UISelectBox").click(function(){
-				$(this).blur();	
-				$(".UISelectBox .UISelectBoxOptions").toggle();
-				return false;
-			});
-			</script>
 			<div class="standAppContent">
 				<div class="standardForm">
 				<form action="/session" method="post">
@@ -116,8 +95,72 @@
 						<input class="text"   name="mapLng" id="mapLng" style="width: 25em;"   type="text" value="" />
 						
 					</label>
-					<div id="googleMap" style="width: 400px; height: 300px"></div>
+					<div id="googleMap1" style="width: 400px; height: 300px"></div>
+					<script type="text/javascript">
 
+    var map;
+    var geocoder;
+    var address;
+
+    
+      map = new GMap2(document.getElementById("googleMap1"));
+      //map.setCenter(new GLatLng(40.730885,-73.997383), 15);
+	  map.setCenter(new GLatLng(39.917, 116.397), 4);
+      map.setUIToDefault();
+      GEvent.addListener(map, "click", getAddress);
+      geocoder = new GClientGeocoder();
+//	  geocoder.setBaseCountryCode('CN');
+//	  alert(geocoder.getBaseCountryCode());
+
+    
+    function getAddress(overlay, latlng) {
+      if (latlng != null) {
+        address = latlng;
+        geocoder.getLocations(latlng, showAddress);
+      }
+    }
+
+    function showAddress(response) {
+       map.clearOverlays();
+	   if (!response || response.Status.code != 200) {
+        alert("Status Code:" + response.Status.code);
+      } else {
+        place = response.Placemark[0];
+	     $('mapDesc').value = place.address;
+		 $('mapLat').value = place.Point.coordinates[1];
+         $('mapLng').value = place.Point.coordinates[0];
+	  }
+
+
+
+///	北京民安小区
+function addAddressToMap(response) {
+      map.clearOverlays();
+      if (!response || response.Status.code != 200) {
+        alert("Sorry, we were unable to geocode that address");
+      } else {
+        place = response.Placemark[0];
+        point = new GLatLng(place.Point.coordinates[1],
+                            place.Point.coordinates[0]);
+        marker = new GMarker(point);
+        map.addOverlay(marker);
+        marker.openInfoWindowHtml(place.address + '<br>' +
+          '<b>Country code:</b> ' + place.AddressDetails.Country.CountryNameCode);
+      }
+    }
+
+    // showLocation() is called when you click on the Search button
+    // in the form.  It geocodes the address entered into the form
+    // and adds a marker to the map at that location.
+    function showLocation() {
+      var address = $('mapDesc').value;
+	  alert(address);
+      geocoder.getLocations(address, addAddressToMap);
+    }
+
+
+
+    </script>
 					<label>
 						<input name="commit" tabindex="3" type="submit" value="创建" />
 					</label>
