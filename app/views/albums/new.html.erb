@@ -75,7 +75,7 @@
 
         <label for="accessType">
           访问权限 <br />
-          <select name="accessType" id="accessType" style="width: 25em;">
+          <select name="accessType" id="accessType" style="width: 25em;" class="text">
             <option value="1">完全公开</option>
             <option value="2">好友可见</option>
             <option value="3">密码访问</option>
@@ -89,13 +89,14 @@
         </label>
 
         <label for="mapDesc">
-          地图<br />
-          <input class="text"   name="mapDesc" id="mapDesc" style="width: 20em;" tabindex="4" type="text" value="" /> <input name="mapq"  id="mapq"   type="button" value="GO"  onclick="showLocation(); return false;"/>
-          <input class="text"   name="mapLat" id="mapLat" style="width: 25em;"   type="text" value="" />
-          <input class="text"   name="mapLng" id="mapLng" style="width: 25em;"   type="text" value="" />
+          地图 <br />
+          <input class="text"   name="mapDesc" id="mapDesc" style="width: 25em;" tabindex="4" type="text" value="" /> 
+		  <input name="mapq"  id="mapq"   type="button" value="GO"  onclick="showLocation(); return false;"/>
+          <input class="text"   name="mapLat" id="mapLat" style="width: 25em;"   type="hidden" value="" />
+          <input class="text"   name="mapLng" id="mapLng" style="width: 25em;"   type="hidden" value="" />
 
         </label>
-        <div id="googleMap1" style="width: 400px; height: 300px"></div>
+        <div id="googleMap1" style="width: 400px; height: 300px; margin:1em 0 0;"></div>
         <script type="text/javascript">
 
           var map;
@@ -119,18 +120,11 @@
         });
 
         map.addOverlay(marker);
-
            GEvent.addListener(map, "moveend", function() {
            var centerTemp = map.getCenter();
-			//geocoder.getLocations(centerTemp, showAddress);
-			
-			//map.removeOverlay(marker);
 			marker.setLatLng(centerTemp) ;
 			geocoder.getLocations(centerTemp, showAddress);
-			//map.addOverlay(marker);
-			//marker.show();
-			//alert(marker.isHidden());
-  
+
 });
 
     
@@ -145,7 +139,12 @@
           function showAddress(response) {
             //map.clearOverlays();
             if (!response || response.Status.code != 200) {
-              alert("Status Code:" + response.Status.code);
+			  $('#mapDesc').val('');
+			  $('#mapLat').val('');
+              $('#mapLng').val('');
+              //alert("Status Code:" + response.Status.code);
+			  alert("不能定位到这一点.");
+
             } else {
               place = response.Placemark[0];
               $('#mapDesc').val(place.address);
@@ -157,17 +156,15 @@
 
             ///
             function addAddressToMap(response) {
-              map.clearOverlays();
               if (!response || response.Status.code != 200) {
                 alert("Sorry, we were unable to geocode that address");
               } else {
-                place = response.Placemark[0];
-                point = new GLatLng(place.Point.coordinates[1],
-                place.Point.coordinates[0]);
-                marker = new GMarker(point);
-                map.addOverlay(marker);
-                marker.openInfoWindowHtml(place.address + '<br>' +
-                  '<b>Country code:</b> ' + place.AddressDetails.Country.CountryNameCode);
+                var place = response.Placemark[0];
+                var point = new GLatLng(place.Point.coordinates[1],place.Point.coordinates[0]);
+
+				map.setCenter(point);
+		marker.setLatLng(point) ;
+				 
               }
             }
 

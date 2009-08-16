@@ -30,6 +30,12 @@ ActionController::Routing::Routes.draw do |map|
   #     admin.resources :products
   #   end
 
+  #authlogic 
+  map.resource  :account, :controller => "users"
+  map.resources :users
+  map.resource  :user_session
+
+
   # ----------------------bujiande reutes begin----------------------------------
   map.resources :albums
 
