@@ -1,186 +1,208 @@
-		<div class="rightCol buRightCol"><!-- Right Column (optional region) -->
-			<h2>不见得是啥a?</h2>
-			<p>The right column is by default 300px wide.  It can be extended via all the same classes that are available to right column.</p>
-			<div class="collapsible">
-				<h2 class="sidebarTitle">
-					<span>照片</span>
-				</h2>
-				<ul class="sidebarMenu" style="display: none;">
-					<li>
-						<a rel="history"  title="#beforethestorm" href="#">
-							<span>地图浏览</span>
-						</a>
-					</li>
-					<li>
-						<a rel="history" href="#">
-							<span>列表浏览</span>
-						</a>
-					</li>
-					<li>
-						<a rel="history" href="#">
-							<span>上传照片</span>
-						</a>
-					</li>
-				</ul>
-				<hr/>
-			</div>
-			<div class="collapsible collapsed">
-				<h2 class="sidebarTitle">
-					<span>相册</span>
-				</h2>
-				<ul class="sidebarMenu" style="display: block;">
-					<li>
-						<a rel="history"  title="#beforethestorm" href="#">
-							<span>相册浏览</span>
-						</a>
-					</li>
-					<li>
-						<a rel="history" href="#">
-							<span>管理相册</span>
-						</a>
-					</li>
-					<li class="active">
-						<a rel="history" href="/albums/new">
-							<span>新建相册</span>
-						</a>
-					</li>
-				</ul>
-				<hr/>
-			</div>
-		</div>
+<div class="rightCol buRightCol"><!-- Right Column (optional region) -->
+  <h2>不见得是啥a?</h2>
+  <p>The right column is by default 300px wide.  It can be extended via all the same classes that are available to right column.</p>
+  <div class="collapsible">
+    <h2 class="sidebarTitle">
+      <span>照片</span>
+    </h2>
+    <ul class="sidebarMenu" style="display: none;">
+      <li>
+        <a rel="history"  title="#beforethestorm" href="#">
+          <span>地图浏览</span>
+        </a>
+      </li>
+      <li>
+        <a rel="history" href="#">
+          <span>列表浏览</span>
+        </a>
+      </li>
+      <li>
+        <a rel="history" href="#">
+          <span>上传照片</span>
+        </a>
+      </li>
+    </ul>
+    <hr/>
+  </div>
+  <div class="collapsible collapsed">
+    <h2 class="sidebarTitle">
+      <span>相册</span>
+    </h2>
+    <ul class="sidebarMenu" style="display: block;">
+      <li>
+        <a rel="history"  title="#beforethestorm" href="#">
+          <span>相册浏览</span>
+        </a>
+      </li>
+      <li>
+        <a rel="history" href="#">
+          <span>管理相册</span>
+        </a>
+      </li>
+      <li class="active">
+        <a rel="history" href="/albums/new">
+          <span>新建相册</span>
+        </a>
+      </li>
+    </ul>
+    <hr/>
+  </div>
+</div>
 
 
-		<div class="main buMain"><!-- Main Content -->
-			<div class="UISelectBox">
-				<a href="#" class="UISelectValue">选项六</a>
-				<ul class="UISelectBoxOptions" style="display: none;">
-					<li class="UISelectBoxItem"><a rel="1" href="#">选项一</a></li>
-					<li class="UISelectBoxItem"><a rel="2" href="#">选项二</a></li>
-					<li class="UISelectBoxItem"><a rel="3" href="#">选项二</a></li>
-				</ul>
-			</div>
-			<div class="standAppContent">
-				<div class="standardForm">
-				<form action="/session" method="post">
-					<h2><strong>创建新相册</strong></h2>
-					<label for="name">
-						相册名字<br />
-						<input class="text"   name="name" style="width: 25em;" tabindex="1" type="text" value="" />
-					</label>
+<div class="main buMain"><!-- Main Content -->
+  <div class="UISelectBox">
+    <a href="#" class="UISelectValue">选项六</a>
+    <ul class="UISelectBoxOptions" style="display: none;">
+      <li class="UISelectBoxItem"><a rel="1" href="#">选项一</a></li>
+      <li class="UISelectBoxItem"><a rel="2" href="#">选项二</a></li>
+      <li class="UISelectBoxItem"><a rel="3" href="#">选项二</a></li>
+    </ul>
+  </div>
+  <div class="standAppContent">
+    <div class="standardForm">
+      <form action="/session" method="post">
+        <h2><strong>创建新相册</strong></h2>
+        <label for="name">
+          相册名字<br />
+          <input class="text"   name="name" style="width: 25em;" tabindex="1" type="text" value="" />
+        </label>
 
-					<label for="description">
-						相册描述 <br />
-						<textarea name="description" tabindex="2" rows="3" cols="50"></textarea>
-					</label>
+        <label for="description">
+          相册描述 <br />
+          <textarea name="description" tabindex="2" rows="3" cols="50"></textarea>
+        </label>
 
-					<label for="accessType">
-						访问权限 <br />
-						<select name="accessType" id="accessType" style="width: 25em;">
-							<option value="1">完全公开</option>
-							<option value="2">好友可见</option>
-							<option value="3">密码访问</option>
-							<option value="4">纯粹私有</option>
-						</select>
-					</label>
+        <label for="accessType">
+          访问权限 <br />
+          <select name="accessType" id="accessType" style="width: 25em;">
+            <option value="1">完全公开</option>
+            <option value="2">好友可见</option>
+            <option value="3">密码访问</option>
+            <option value="4">纯粹私有</option>
+          </select>
+        </label>
 
-					<label for="password" style="" id="lblPasswd">
-						密码 <br />
-						<input class="text" id="password" name="password" style="width: 25em;" tabindex="3" type="password" value="" />
-					</label>
+        <label for="password" style="" id="lblPasswd">
+          密码 <br />
+          <input class="text" id="password" name="password" style="width: 25em;" tabindex="3" type="password" value="" />
+        </label>
 
-					<label for="mapDesc" style="display:;">
-						地图<br />
-						<input class="text"   name="mapDesc" id="mapDesc" style="width: 20em;" tabindex="4" type="text" value="" /> <input name="mapq"  id="mapq"   type="button" value="GO"  onclick="showLocation(); return false;"/>
-						<input class="text"   name="mapLat" id="mapLat" style="width: 25em;"   type="text" value="" />
-						<input class="text"   name="mapLng" id="mapLng" style="width: 25em;"   type="text" value="" />
-						
-					</label>
-					<div id="googleMap1" style="width: 400px; height: 300px"></div>
-					<script type="text/javascript">
+        <label for="mapDesc">
+          地图<br />
+          <input class="text"   name="mapDesc" id="mapDesc" style="width: 20em;" tabindex="4" type="text" value="" /> <input name="mapq"  id="mapq"   type="button" value="GO"  onclick="showLocation(); return false;"/>
+          <input class="text"   name="mapLat" id="mapLat" style="width: 25em;"   type="text" value="" />
+          <input class="text"   name="mapLng" id="mapLng" style="width: 25em;"   type="text" value="" />
 
-    var map;
-    var geocoder;
-    var address;
+        </label>
+        <div id="googleMap1" style="width: 400px; height: 300px"></div>
+        <script type="text/javascript">
 
-    
-      map = new GMap2(document.getElementById("googleMap1"));
-      //map.setCenter(new GLatLng(40.730885,-73.997383), 15);
-	  map.setCenter(new GLatLng(39.917, 116.397), 4);
-      map.setUIToDefault();
-      GEvent.addListener(map, "click", getAddress);
-      geocoder = new GClientGeocoder();
-//	  geocoder.setBaseCountryCode('CN');
-//	  alert(geocoder.getBaseCountryCode());
+          var map;
+          var geocoder;
+          var address;
+          var center;
+          var marker ;
 
-    
-    function getAddress(overlay, latlng) {
-      if (latlng != null) {
-        address = latlng;
-        geocoder.getLocations(latlng, showAddress);
-      }
-    }
+          map = new GMap2(document.getElementById("googleMap1"));
+          center = new GLatLng(39.917,116.397);
+          map.setCenter(center, 7);
+          map.setMapType(G_NORMAL_MAP);
 
-    function showAddress(response) {
-       map.clearOverlays();
-	   if (!response || response.Status.code != 200) {
-        alert("Status Code:" + response.Status.code);
-      } else {
-        place = response.Placemark[0];
-	     $('mapDesc').value = place.address;
-		 $('mapLat').value = place.Point.coordinates[1];
-         $('mapLng').value = place.Point.coordinates[0];
-	  }
+		  marker = new GMarker(center, {draggable: true});
 
+          geocoder = new GClientGeocoder();
 
+          GEvent.addListener(marker, "dragend", function(latlng) {
+          // marker.openInfoWindowHtml("正在反弹...");
+          geocoder.getLocations(latlng, showAddress);
+        });
 
-///	北京民安小区
-function addAddressToMap(response) {
-      map.clearOverlays();
-      if (!response || response.Status.code != 200) {
-        alert("Sorry, we were unable to geocode that address");
-      } else {
-        place = response.Placemark[0];
-        point = new GLatLng(place.Point.coordinates[1],
-                            place.Point.coordinates[0]);
-        marker = new GMarker(point);
         map.addOverlay(marker);
-        marker.openInfoWindowHtml(place.address + '<br>' +
-          '<b>Country code:</b> ' + place.AddressDetails.Country.CountryNameCode);
+
+           GEvent.addListener(map, "moveend", function() {
+           var centerTemp = map.getCenter();
+			//geocoder.getLocations(centerTemp, showAddress);
+			
+			//map.removeOverlay(marker);
+			marker.setLatLng(centerTemp) ;
+			geocoder.getLocations(centerTemp, showAddress);
+			//map.addOverlay(marker);
+			//marker.show();
+			//alert(marker.isHidden());
+  
+});
+
+    
+          function getAddress(overlay, latlng) {
+            if (latlng != null) {
+              address = latlng;
+			  
+              geocoder.getLocations(latlng, showAddress);
+            }
+          }
+
+          function showAddress(response) {
+            //map.clearOverlays();
+            if (!response || response.Status.code != 200) {
+              alert("Status Code:" + response.Status.code);
+            } else {
+              place = response.Placemark[0];
+              $('#mapDesc').val(place.address);
+              $('#mapLat').val(place.Point.coordinates[1]);
+              $('#mapLng').val(place.Point.coordinates[0]);
+            }
+          }
+
+
+            ///
+            function addAddressToMap(response) {
+              map.clearOverlays();
+              if (!response || response.Status.code != 200) {
+                alert("Sorry, we were unable to geocode that address");
+              } else {
+                place = response.Placemark[0];
+                point = new GLatLng(place.Point.coordinates[1],
+                place.Point.coordinates[0]);
+                marker = new GMarker(point);
+                map.addOverlay(marker);
+                marker.openInfoWindowHtml(place.address + '<br>' +
+                  '<b>Country code:</b> ' + place.AddressDetails.Country.CountryNameCode);
+              }
+            }
+
+            // showLocation() is called when you click on the Search button
+            // in the form.  It geocodes the address entered into the form
+            // and adds a marker to the map at that location.
+            function showLocation() {
+              var address = $('#mapDesc').val();
+              alert(address);
+              geocoder.getLocations(address, addAddressToMap);
+            }
+
+
+
+        </script>
+        <label>
+          <input name="commit" tabindex="3" type="submit" value="创建" />
+        </label>
+      </form>
+    </div>
+  </div>
+  <script type="text/javascript">
+      // select
+      if($("#accessType").val() != 3){
+        $('#lblPasswd').hide();
       }
-    }
+      $("#accessType").change(function(){
+        if($(this).val() == 3){
+          $('#lblPasswd').show();
+        }else{
+          $('#lblPasswd').hide();
+        }
 
-    // showLocation() is called when you click on the Search button
-    // in the form.  It geocodes the address entered into the form
-    // and adds a marker to the map at that location.
-    function showLocation() {
-      var address = $('mapDesc').value;
-	  alert(address);
-      geocoder.getLocations(address, addAddressToMap);
-    }
-
+      });
+  </script>
 
 
-    </script>
-					<label>
-						<input name="commit" tabindex="3" type="submit" value="创建" />
-					</label>
-				</form>
-			</div>
-		</div>
-		<script type="text/javascript">
-			// select
-			if($("#accessType").val() != 3){
-			 $('#lblPasswd').hide();
-			}
-			$("#accessType").change(function(){
-				if($(this).val() == 3){
-					$('#lblPasswd').show();
-				}else{
-				$('#lblPasswd').hide();
-				}
-
-			});
-			</script>
-
-		
-		</div>
+</div>
