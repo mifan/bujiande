@@ -1,7 +1,34 @@
-<h1>Register</h1>
+<div class="body"><!-- Body -->
 
-<% form_for @user, :url => account_path do |f| %>
-  <%= f.error_messages %>
-  <%= render :partial => "form", :object => f %>
-  <%= f.submit "Register" %>
-<% end %>
+
+<div class="main buMain"><!-- Main Content -->
+			<div class="standardForm backgroundCyan borderGray" style="width:35em;">
+			<% form_for @user, :url => account_path do |f| %>
+				<h2><strong>注册</strong></h2>
+
+				<label for="user_login">
+					用户名<br />
+					<%= f.text_field :login ,:class => 'text em20',:tabindex => '1',:size => '20' %>
+					<span class="fieldDesc">2~20个字符,全站唯一,不可重复.</span>
+				</label>
+
+				<label for="user_email">
+					Email<br />
+					<%= f.text_field :email ,:class => 'text em20',:tabindex => '2' %>
+					<span class="fieldDesc">真实的Email,我们会发信去验证的 :)</span>
+				</label>
+
+				<label for="password">
+					密码 <a href="/forgot_password">(忘记密码?)</a><br />
+					<%= f.password_field :password ,:class => 'text em20',:tabindex => '3' %>
+					<span class="fieldDesc">最少4位,要记牢哦.</span>
+				</label>
+				 
+
+				<label>
+					<input name="commit" tabindex="3" type="submit" value="注册" />
+				</label>
+			<% end %>
+			</div>
+		</div>
+</div>

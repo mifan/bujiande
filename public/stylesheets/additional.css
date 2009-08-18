@@ -1,6 +1,5 @@
 /* Default extension of page layout : class include [buPage,buHead,buBody,buFooter] */
 
-
 .buPage{
 }
 
@@ -15,7 +14,6 @@
 }
 
 .buRightCol {
-
 }
 
 /* ###############-------------side bar begin ---------- */
@@ -103,21 +101,8 @@ ul.sidebarMenu li a span {
 
 /* ###############-------------side bar End ---------- */ 
 
-
-
-
-
-
-
-
-
-
-
-
-
 .buMain {
     border-right: 1px solid #BDDCAD;
-    background-color:#E2F2FB;
 }
 
 .buFoot {
@@ -126,11 +111,19 @@ ul.sidebarMenu li a span {
 }
 
 /* custom color , class include [buBackColor] */
-.buBackColor{
+ 
 
+.backgroundCyan{
+    background-color: #E2F2FB;
+}
+
+.backgroundGreen{
     background-color: #DDFFCC;
 }
 
+.backgroundWhite{
+    background-color: white;
+}
 
 /*     Treatment logo ,class include [logo]*/
 /* image size 125x29 */
@@ -185,6 +178,14 @@ ul.outter li {
     padding:1em 2em 1em;
 }
 
+.borderGray{ 
+  border:5px solid #ddd;
+}
+
+.borderWhite{ 
+  border:5px solid white;
+}
+
 .standardForm a { 
     font-size:90%;
 }
@@ -201,6 +202,21 @@ ul.outter li {
     padding:5px;
     background-color: #f9f9f9;
 }
+
+.standardForm form .fieldDesc {
+    display:block;
+    padding-left:3px;
+	font-size:75%;
+}
+
+.standardForm form .em20 {
+    width: 20em;
+}
+
+.standardForm form .em25 {
+    width: 25em;
+}
+
 
 /*      Image ul li                 */
 ul.rowBox { 
