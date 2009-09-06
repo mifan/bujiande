@@ -1,14 +1,70 @@
-<h1>Login</h1>
+<div class="body"><!-- Body -->
 
-<% form_for @user_session, :url => user_session_path do |f| %>
-  <%= f.error_messages %>
-  <%= f.label :login %><br />
-  <%= f.text_field :login %><br />
-  <br />
-  <%= f.label :password %><br />
-  <%= f.password_field :password %><br />
-  <br />
-  <%= f.check_box :remember_me %><%= f.label :remember_me %><br />
-  <br />
-  <%= f.submit "Login" %>
-<% end %>
+<div class="main buMain"><!-- Main Content -->
+			<div class="standardForm backgroundCyan borderGray" style="width:35em;">
+			<% form_for @user_session, :url => user_session_path do |f| %>
+				<h2><strong>登录</strong></h2>
+
+
+				<label for="login">
+					Email<br />
+					<%= f.text_field :login ,:class => 'text em20',:tabindex => '1' %>
+				</label>
+
+				<label for="password">
+					密码 <a href="/forgot_password">(忘记密码?)</a><br />
+					<%= f.password_field :password ,:class => 'text em20',:tabindex => '2' %>
+				</label>
+
+				<label for="remerber_me">
+					自动登录<br />
+					<%= f.check_box :remember_me ,:tabindex => '3'%>
+				</label>
+
+
+				 
+
+				<label>
+					<input name="commit" tabindex="4" type="submit" value="登录" />
+				</label>
+			<% end %>
+			</div>
+		</div>
+		<script type="text/javascript" src="/javascripts/jquery-validate/jquery.validate.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var validator = $("#new_user_session").validate({
+					rules: {						
+						'user_session[login]': {
+							required: true,
+							email: true
+						},
+						'user_session[password]': {
+							required: true,
+							minlength: 4,
+							maxlength: 20
+						}
+					},
+					messages: {					
+						'user_session[login]': {
+							required: "Email不能为空",
+							email: "需要有效的Email地址"
+						},
+						'user_session[password]': {
+							required: "密码不能为空",
+							minlength: "密码最少4个字符",
+							maxlength: "密码最多20个字符"
+						},
+					},
+					
+					errorElement: 'span',
+					success: function(span) {
+						// set &nbsp; as text for IE
+						span.html("&nbsp;").addClass("valid");
+					}
+
+				});
+			});
+		</script>
+
+</div>
