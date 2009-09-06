@@ -8,7 +8,7 @@
 
 				<label for="user_login">
 					用户名<br />
-					<%= f.text_field :login ,:class => 'text em20 required',:tabindex => '1',:size => '20' %>
+					<%= f.text_field :login ,:class => 'text em20',:tabindex => '1',:size => '20' %>
 					<span class="fieldDesc">2~20个字符,全站唯一,不可重复.</span>
 				</label>
 
@@ -36,19 +36,48 @@
 			$(document).ready(function() {
 				var validator = $("#new_user").validate({
 					rules: {
-						user_login: "required",
-						user_email: "required",
-						user_password: "required"
+						'user[login]': {
+							required: true,
+							minlength: 2,
+							maxlength: 20,
+							remote: '/users/login'
+						},
+						'user[email]': {
+							required: true,
+							email: true,
+							remote: '/users/email'
+						},
+						'user[password]': {
+							required: true,
+							minlength: 4,
+							maxlength: 20
+						}
 					},
 					messages: {
-						user_login: "Enter your user_login",
-						user_email: "Enter your user_email",
-						user_password: "Enter user_password"
+						'user[login]': {
+							required: "用户名不能为空",
+							minlength: "用户名最少2个字符",
+							maxlength: "用户名最多20个字符",
+							remote:　　"用户名已经被使用"
+						},
+						'user[email]': {
+							required: "Email不能为空",
+							email: "需要有效的Email地址",
+							remote: "Email已经被使用"
+						},
+						'user[password]': {
+							required: "密码不能为空",
+							minlength: "密码最少4个字符",
+							maxlength: "密码最多20个字符"
+						},
 					},
+					
 					errorElement: 'span',
-					submitHandler: function() {
-						alert("submitted!");
+					success: function(span) {
+						// set &nbsp; as text for IE
+						span.html("&nbsp;").addClass("valid");
 					}
+
 				});
 			});
 		</script>

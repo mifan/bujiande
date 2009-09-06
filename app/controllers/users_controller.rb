@@ -33,4 +33,25 @@ class UsersController < ApplicationController
       render :action => :edit
     end
   end
+
+
+
+  #check user name exist , resource : /users/login
+  def login
+	login_str = params[:user][:login] if params[:user]
+	if login_str && !User.find_by_login(login_str)
+		render :text => 'true'
+	else
+		render :text => 'false'
+	end
+  end
+  #check user email exist , resource : /users/email
+  def email
+	email_str = params[:user][:email] if params[:user]
+	if email_str && !User.find_by_email(email_str)
+		render :text => 'true'
+	else
+		render :text => 'false'
+	end
+  end
 end

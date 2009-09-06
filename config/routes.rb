@@ -32,7 +32,7 @@ ActionController::Routing::Routes.draw do |map|
 
   #authlogic 
   map.resource  :account, :controller => "users"
-  map.resources :users
+  map.resources :users ,:collection => { :email => :get, :login => :get }
   map.resource  :user_session
 
 

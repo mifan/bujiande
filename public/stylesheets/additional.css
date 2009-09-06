@@ -380,3 +380,22 @@ ul.rowBox li:hover, ul.rowBox li.hover {
 .UISelectBoxOptions a.selected{
     background: #bbb url(../images/selectbox/select4.jpg) no-repeat left center;
 }
+
+
+/*             jquery.validate css     */
+span.valid {
+	background-image:  url(/images/validate/span_valid.png) !important;
+}
+
+span.error {
+	background: transparent url(/images/validate/span_error.png) no-repeat scroll 0.5em 0;
+	padding-left: 23px;
+	color: #801B1B;
+}
+
+input.valid {
+
+}
+
+input.error {
+}
